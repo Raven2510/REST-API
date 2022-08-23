@@ -3,7 +3,7 @@ const {envConfig} = require('./envar')
 
 const env = envConfig()
 
-mongoose.exports.dbConnect = async () => {
+module.exports.dbConnect = async () => {
     try{
         await mongoose.connect(env.DB_URL)
         console.log("Connected to database.")
