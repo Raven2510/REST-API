@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+//collection schema
 const schema = mongoose.Schema({
     author_id: {
         type: mongoose.Schema.Types.ObjectId,
