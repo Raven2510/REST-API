@@ -8,7 +8,11 @@ const env = envConfig()
 //dbConnect() function enables the connection from the mongodb database.
 module.exports.dbConnect = async () => {
     try{
-        await mongoose.connect(env.DB_URL)
+        await mongoose.connect(env.DB_URL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useCreateIndex: true
+        })
         console.log("Connected to database.")
     } catch(err){
         console.error(err)
