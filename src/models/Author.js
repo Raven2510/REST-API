@@ -1,26 +1,26 @@
 const mongoose = require('mongoose')
 
 const schema = mongoose.Schema({
-    author_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'authors',
-        required: true
-    },
-    title: {
+    name: {
         type: String,
         required: true
     },
-    description: {
+    username: {
         type: String,
         required: true
     },
-    genre: [{
+    email: {
         type: String,
         required: true
-    }],
-    published_at: {
-        type: Date,
-        default: Date.now,
+    },
+    password: {
+        type: String,
+        required: true,
+        minlength: 8
+    },
+    role: {
+        type: String,
+        enum: ['admin', 'author'],
         required: true
     },
     created_at: {
@@ -36,4 +36,4 @@ const schema = mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('books', schema)
+module.exports = mongoose.model('authors', schema)

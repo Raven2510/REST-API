@@ -1,18 +1,18 @@
 
 function _get(req, res){
-    res.send('Get books')
+    res.send('Get authors')
 }
 
 function _create(req, res){
-    res.send('Create books')
+    res.send('Create authors')
 }
 
 function _update(req, res){
-    res.send('Update books')
+    res.send('Update authors')
 }
 
 function _delete(req, res){
-    res.send('Delete books')
+    res.send('Delete authors')
 }
 
 module.exports = {

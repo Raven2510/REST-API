@@ -7,7 +7,9 @@ dbConnect()
 const env = envConfig()
 
 app.use(express.json())
+app.use('/authors', require('./src/routes/author'))
 app.use('/books', require('./src/routes/book'))
+
 
 app.listen(env.PORT || 4000, () => {
     console.log(`Server started listening to port ${env.PORT || 4000}`)
