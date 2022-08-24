@@ -22,6 +22,7 @@ const schema = mongoose.Schema({
     role: {
         type: String,
         enum: ['admin', 'author'],
+        default: 'author',
         required: true
     },
     created_at: {
